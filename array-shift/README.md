@@ -3,7 +3,6 @@
 ### problem Solving for the reverse array Challenge
 
 <br><br>
-![whiteBoard](../imgs/ScreenshotWhiteBoard.png)
+![whiteBoard](../imgs/insertshiftarray.png)
 
 > time Proccessing >>30 min ,
-> 5 min's for thinking in solution , and the rest for drawing 🤦‍♀️
