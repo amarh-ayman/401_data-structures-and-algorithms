@@ -11,29 +11,18 @@ def test_Node():
 
 def test_EmptyList():
    test01=LinkedList()
-   test01.insert()
-   expected=test01.head.value
-   actual=None
-   assert expected==actual
+   assert test01.head is None
 
 
 def test_insertionand_head ():
    test02=LinkedList()
    test02.insert(2)
-   expected=test02.head.value
-   actual= 2
-   assert expected==actual
+   test02.insert(5)
+   test02.insert('a')
+   assert test02.head.value is 'a'
+   assert test02.head.next.value is 5
+   assert test02.head.next.next.value is 2
 
-
-def test_multiInsertion():
-    test03=LinkedList()
-    test03.insert(2)
-    test03.insert('b')
-    test03.insert('m')
-    test03.insert(5)
-    expected=test03.toString()[1]
-    actual= 4
-    assert expected==actual
 
 def test_findOut():
     test04=LinkedList()
@@ -41,8 +30,8 @@ def test_findOut():
     test04.insert('b')
     test04.insert('m')
     test04.insert(5)
-    assert test04.includes(5)==True
-    assert test04.includes(7)==False
+    assert test04.includes(5) is True
+    assert test04.includes(7) is False
     
 
 def test_output():
@@ -51,5 +40,6 @@ def test_output():
     test05.insert('b')
     test05.insert('m')
     test05.insert(5)
-    expected=test05.toString()[0]
-    actual='{ 5 } -> { m } -> { b } -> { 2 } ->NULL'
+    expected=str(test05)
+    actual=' { 5 } -> { m } -> { b } -> { 2 } ->NULL'
+    assert expected==actual
