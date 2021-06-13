@@ -43,7 +43,16 @@ Includes: Time=> O(n)<br>
 InsertBefore: Time=> O(n)<br>
 InsertAfter: Time=> O(n)<br>
 <br>
-![whiteBoard](../../imgs/linkedlist.png)
+
+# WhiteBoard
+
+## CC05
+
+![code Challenge 5](../../imgs/linkedlist.png)
+
+## CC06
+
+![code Challenge 6](../../imgs/code_Challenge06.png)
 
 ===================================
 
