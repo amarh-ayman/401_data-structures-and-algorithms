@@ -1,5 +1,6 @@
 from linked_list.llist import LinkedList,Node
 from linked_list import __version__
+import pytest
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -43,3 +44,48 @@ def test_output():
     expected=str(test05)
     actual=' { 5 } -> { m } -> { b } -> { 2 } ->NULL'
     assert expected==actual
+
+
+def test_insertBefore_01(data):
+   data.insertBefore('a',7)
+   assert data.head.value is 7
+
+def test_insertBefore_02(data):
+   data.insertBefore(10,7)
+   assert data.head.next.value is 7
+
+def test_insertBefore_03(data):
+   data.insertBefore(6,'m')
+   assert data.head.next.next.value is 'm'   
+
+def test_insertBefore_04(data):
+   with pytest.raises(ValueError):
+      data.insertBefore('c',7)   
+
+###############
+def test_insertAfter_01(data):
+   data.insertAfter('a',7)
+   assert data.head.next.value is 7
+
+def test_insertAfter_02(data):
+   data.insertAfter(10,7)
+   assert data.head.next.next.value is 7
+
+def test_insertAfter_03(data):
+   data.insertAfter(6,7)
+   assert data.head.next.next.next.value is 7  
+
+def test_insertAfter_04(data):
+   with pytest.raises(ValueError):
+      data.insertAfter('c',7)   
+
+
+@pytest.fixture
+def data():
+   ll=LinkedList()
+   ll.append('a')
+   ll.append(10)
+   ll.append(6)
+   return ll
+
+    
