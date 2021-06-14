@@ -78,6 +78,23 @@ class LinkedList:
             raise ValueError('Node not is LL') 
      
 
+    def kthFromTheEnd(self,k):
+        try:
+            length=0
+            item=self.head
+            while(item):
+                length+=1
+                item=item.next
+            if length > k:
+                item=self.head
+                for i in range(0,length-k):
+                    value=item.value
+                    item=item.next
+            return value 
+        except:
+            raise ValueError('Node not is LL')
+ 
+
     def __str__(self):
         if self.head is None:
             return 'Linked List is Empty'
@@ -106,6 +123,8 @@ if __name__ == '__main__':
         item.append(6)
         item.insertAfter(5,77)
         item.insertBefore(5,1)
+        print(item.kthFromTheEnd(1))
+
 
     
         print(item.includes(2))

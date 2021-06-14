@@ -78,7 +78,26 @@ def test_insertAfter_03(data):
 def test_insertAfter_04(data):
    with pytest.raises(ValueError):
       data.insertAfter('c',7)   
+# ===============================
+def test_kthFromTheEnd_01(data):
+   with pytest.raises(ValueError):
+      data.kthFromTheEnd(7) 
 
+def test_kthFromTheEnd_02(data):
+   with pytest.raises(ValueError):
+      data.kthFromTheEnd(3)
+
+def test_kthFromTheEnd_03(data):
+   with pytest.raises(ValueError):
+      data.kthFromTheEnd(-7)  
+
+def test_kthFromTheEnd_04(data02):
+   expected=data02.kthFromTheEnd(0)
+   assert data02.head.value==expected
+
+def test_kthFromTheEnd_05(data):
+   expected=data.kthFromTheEnd(1)
+   assert data.head.next.value==expected    
 
 @pytest.fixture
 def data():
@@ -87,5 +106,12 @@ def data():
    ll.append(10)
    ll.append(6)
    return ll
+
+@pytest.fixture
+def data02():
+   ll=LinkedList()
+   ll.append(1)
+   return ll
+
 
     
