@@ -42,6 +42,7 @@ Append: Time=> O(n)<br>
 Includes: Time=> O(n)<br>
 InsertBefore: Time=> O(n)<br>
 InsertAfter: Time=> O(n)<br>
+kthFromEnd(k) : Time=> O(n)
 <br>
 
 # WhiteBoard
@@ -53,6 +54,10 @@ InsertAfter: Time=> O(n)<br>
 ## CC06
 
 ![code Challenge 6](../../imgs/code_Challenge06.png)
+
+## CC07
+
+![code Challenge 6](../../imgs/ch07.png)
 
 ===================================
 
