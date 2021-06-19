@@ -8,6 +8,11 @@ Write a function called zipLists which takes two linked lists as arguments. Zip 
 
 ## Approach & Efficiency
 
+### Big O
+
+time ==> O(n) <br>
+space==>O(1)
+
 ## Solution
 
-will found all in this link [zip code]()
+will found all in this link [zip code](https://raw.githubusercontent.com/amarh-ayman/401_data-structures-and-algorithms/main/challenges/ll-zip/ll_zip/ll_zip.py)
