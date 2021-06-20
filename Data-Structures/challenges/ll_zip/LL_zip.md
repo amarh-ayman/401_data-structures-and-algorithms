@@ -4,7 +4,7 @@ Write a function called zipLists which takes two linked lists as arguments. Zip 
 
 ## Whiteboard Process
 
-![zipping](../../imgs/zipping.png)
+![zipping](../../../imgs/zipping.png)
 
 ## Approach & Efficiency
 
@@ -15,4 +15,4 @@ space==>O(1)
 
 ## Solution
 
-will found all in this link [zip code](https://raw.githubusercontent.com/amarh-ayman/401_data-structures-and-algorithms/main/challenges/ll-zip/ll_zip/ll_zip.py)
+will found all in this link [zip code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/ll_zip/ll_zip.py)
