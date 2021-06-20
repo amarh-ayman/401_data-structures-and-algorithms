@@ -1,10 +1,6 @@
 from linked_list.llist import LinkedList,Node
 from linked_list import __version__
 import pytest
-<<<<<<< HEAD
-=======
-
->>>>>>> 08797bc080c81f006521c8e9333285507056f5d6
 def test_version():
     assert __version__ == '0.1.0'
 
