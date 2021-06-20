@@ -2,6 +2,10 @@
 
 <!-- Short summary or background information -->
 
+## Solution
+
+[Click on the Link](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/stacks_and_queues/stacks_and_queues.py)
+
 ### About Stacks
 
 - A stack is a data structure that consists of Nodes. Each Node references the next Node in the stack, but does not reference its previous.
@@ -64,7 +68,3 @@ Define pop, push, peak and isempty for stack and enqueue, dequeue, peak and isem
 - LILO: Last In Last Out: This means that the last item in the queue will be the last item out of the queue.
 
 ![](https://holycoders.com/content/images/wordpress/2020/04/Queue-data-structure.png)
-
-```
-
-```
