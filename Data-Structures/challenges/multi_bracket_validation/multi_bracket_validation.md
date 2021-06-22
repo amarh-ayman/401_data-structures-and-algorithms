@@ -4,7 +4,7 @@ Your function should take a string as its only argument, and should return a boo
 
 ## Whiteboard Process
 
-![zipping](../../../imgs/zipping.png)
+![zipping](../../../imgs/CC12.png)
 
 ## Approach & Efficiency
 
@@ -15,4 +15,4 @@ space==>O(1)
 
 ## Solution
 
-will found all in this link [zip code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/ll_zip/ll_zip.py)
+will found all in this link [zip code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/multi_bracket_validation/multi_bracket_validation.py)
