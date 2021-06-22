@@ -6,6 +6,7 @@ Create a class called AnimalShelter which holds only dogs and cats. The shelter 
 
 ![zipping](../../../imgs/animalshelter.png)
 
+
 ## Approach & Efficiency
 
 ### Big O
