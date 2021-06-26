@@ -11,3 +11,4 @@
 | CC10   | [Stack and Queue](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/challenges/stacks_and_queues/stacksAndQueue)                                         |
 | CC11   | [Stack with Queue](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/challenges/queueWithStacks/queue_with_stacks)                                       |
 | CC13   | [multi bracket validation](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/multi_bracket_validation/multi_bracket_validation.py) |
+| CC15   | [trees](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/trees/tree.md)                                                           |
