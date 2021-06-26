@@ -68,6 +68,13 @@ class BinaryTree:
         return cls.print
 
 
+
+         
+                
+            
+            
+            
+
 # tree =Tree()
 # tree.root = Node(1)
 

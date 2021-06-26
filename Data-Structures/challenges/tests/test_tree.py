@@ -1,4 +1,5 @@
-from trees.tree import BinaryTree,Node
+from trees.tree import *
+from trees.BinaryTree import *
 import pytest
 
 def test_preOrder(data):
@@ -16,6 +17,27 @@ def test_Empty():
   assert tree.inOrder()=='None'
   assert tree.postOrder()=='None'
 
+def test_add_BinarySearchTree():
+  tree=BinarySearchTree()
+  tree.Add(6)
+  assert tree.root.value==6
+  tree.Add(10)
+  assert tree.root.right.value==10
+  tree.Add(3)
+  assert tree.root.left.value==3
+  tree.Add(30)
+  assert tree.root.right.right.value==30
+
+
+def test_BinarySearchTree_withBinaryTreeFunctions():
+    tree = BinarySearchTree()
+    tree.Add(5)
+    tree.Add(10)
+    tree.Add(4)
+    assert tree.preOrder() == "5410"
+    assert tree.inOrder() == "4510"
+    assert tree.postOrder() == "4105"
+
 
 @pytest.fixture
 def data():
@@ -24,4 +46,13 @@ def data():
   tree.root.left = Node(2)
   tree.root.right = Node(3)
   tree.root.left.left = Node(4)
+  return tree
+
+@pytest.fixture
+def data2():
+  tree=BinarySearchTree()
+  tree.Add(6)
+  tree.Add(10)
+  tree.Add(3)
+  tree.Add(30)
   return tree
