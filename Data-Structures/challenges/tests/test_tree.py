@@ -1,4 +1,4 @@
-from trees.tree import Tree,Node
+from trees.tree import BinaryTree,Node
 import pytest
 
 def test_preOrder(data):
@@ -11,7 +11,7 @@ def test_postOrder(data):
   assert data.postOrder()=='4231'
 
 def test_Empty():
-  tree=Tree()
+  tree=BinaryTree()
   assert tree.preOrder()=='None'
   assert tree.inOrder()=='None'
   assert tree.postOrder()=='None'
@@ -19,7 +19,7 @@ def test_Empty():
 
 @pytest.fixture
 def data():
-  tree =Tree()
+  tree =BinaryTree()
   tree.root = Node(1)
   tree.root.left = Node(2)
   tree.root.right = Node(3)
