@@ -1,11 +1,13 @@
 import re
+import pysnooper
+
 dictinary={ 
     '{':'}',
     '(':')',
     '[':']'
 }
 
-
+@pysnooper.snoop()
 def check(input):
   value= re.findall(r'[{}()\[\]]',input)
   array_check=[]
