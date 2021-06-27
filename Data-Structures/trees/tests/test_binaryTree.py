@@ -1,5 +1,5 @@
-from Binary_tree.BinaryTree import *
-from Binary_tree.BinarySearchTree import *
+from trees.BinaryTree import *
+from trees.BinarySearchTree import *
 import pytest
 
 def test_preOrder(data):
@@ -44,7 +44,7 @@ def test_contain(data2):
 
 def test_maximumNumber(data,data2):
   assert data.max()==4
-  assert data.max()==30
+  assert data2.max()==30
   tree =BinaryTree()
   assert tree.max()=='there is an Error'
 
