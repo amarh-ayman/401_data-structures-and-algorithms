@@ -1,5 +1,5 @@
-from trees.tree import *
-from trees.BinaryTree import *
+from Binary_tree.BinaryTree import *
+from Binary_tree.BinarySearchTree import *
 import pytest
 
 def test_preOrder(data):

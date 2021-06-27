@@ -1,4 +1,4 @@
-from trees.tree import *
+from Binary_tree.BinaryTree import *
 
 class BinarySearchTree(BinaryTree):
     def Add(self ,key):
@@ -42,12 +42,12 @@ class BinarySearchTree(BinaryTree):
         return _cont(self.root)
 
     
-# tree = BinarySearchTree()
-# tree.Add(23)
-# tree.Add(8)
-# tree.Add(42)
-# tree.Add(4)
-# tree.Add(16)
-# tree.Add(27)
+tree = BinarySearchTree()
+tree.Add(23)
+tree.Add(8)
+tree.Add(42)
+tree.Add(4)
+tree.Add(16)
+tree.Add(27)
 
-# print(tree.contain(30))
+print(tree.contain(30))
