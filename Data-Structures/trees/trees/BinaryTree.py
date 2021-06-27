@@ -103,9 +103,11 @@ tree =BinaryTree()
 # tree.root.left.right = Node(50)
 # tree.root.right.right = Node(100)
 
-print("Pre order : ", end="")
-print(tree.preOrder())  
+
+# print("Pre order : ", end="")
+# print(tree.preOrder())  
 print(tree.max()) 
+
 # print(tree.inOrder()) 
 # print(tree.postOrder()) 
             
