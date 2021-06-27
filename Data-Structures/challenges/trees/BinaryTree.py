@@ -16,7 +16,7 @@ class BinarySearchTree(BinaryTree):
                 else :    
                     node.left = insert(node.left)
             else:
-                if node.left is None :
+                if node.right is None :
                     node.right = Node(key)
                 else :    
                     node.right = insert(node.right)
@@ -33,9 +33,9 @@ class BinarySearchTree(BinaryTree):
                     return True
                     
                 if key < node.value:
-                    _cont(node.left)
+                    return _cont(node.left)
                 else:
-                    _cont(node.right)
+                   return _cont(node.right)
             except:   
                 return False   
                 

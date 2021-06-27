@@ -38,6 +38,10 @@ def test_BinarySearchTree_withBinaryTreeFunctions():
     assert tree.inOrder() == "4510"
     assert tree.postOrder() == "4105"
 
+def test_contain(data2):
+  assert data2.contain(3)==True
+  assert data2.contain(113)==False
+
 
 @pytest.fixture
 def data():
