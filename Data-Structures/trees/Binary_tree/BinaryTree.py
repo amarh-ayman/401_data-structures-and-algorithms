@@ -67,24 +67,45 @@ class BinaryTree:
     def printing(cls):
         return cls.print
 
+    def max(self):
+        
+        try:
+            maximum=0
+            def _max(node):
+                nonlocal maximum
+                if node.value > maximum :
+                    maximum=node.value
+
+                if node.left:
+                    _max(node.left)
+                if node.right:
+                    _max(node.right) 
+            
+            _max(self.root)
+            return maximum
+        except:
+            return 'there is an Error'            
+        
 
 
-         
                 
             
             
             
 
-# tree =Tree()
+tree =BinaryTree()
 # tree.root = Node(1)
 
-# tree.root.left = Node(2)
+# tree.root.left = Node(200)
 # tree.root.right = Node(3)
 
 # tree.root.left.left = Node(4)
+# tree.root.left.right = Node(50)
+# tree.root.right.right = Node(100)
 
-# print("Pre order : ", end="")
-# print(tree.preOrder())   
+print("Pre order : ", end="")
+print(tree.preOrder())  
+print(tree.max()) 
 # print(tree.inOrder()) 
 # print(tree.postOrder()) 
             
