@@ -42,6 +42,11 @@ def test_contain(data2):
   assert data2.contain(3)==True
   assert data2.contain(113)==False
 
+def test_maximumNumber(data,data2):
+  assert data.max()==4
+  assert data.max()==30
+  tree =BinaryTree()
+  assert tree.max()=='there is an Error'
 
 @pytest.fixture
 def data():
