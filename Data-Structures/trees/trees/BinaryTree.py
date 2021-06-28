@@ -106,7 +106,7 @@ tree =BinaryTree()
 
 # print("Pre order : ", end="")
 # print(tree.preOrder())  
-print(tree.max()) 
+# print(tree.max()) 
 
 # print(tree.inOrder()) 
 # print(tree.postOrder()) 
