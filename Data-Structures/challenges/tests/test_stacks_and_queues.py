@@ -55,6 +55,13 @@ def test_enqueue_dequeue_peek_queue():
     queue.dequeue()
     assert queue.front == None
 
+def test_enqueue_dequeue_peek_queue2():
+    queue = Queue()
+    queue.enqueue(1)
+    assert queue.dequeue() ==1
+    queue.enqueue(5)
+    assert queue.dequeue() ==5
+
 def test_QueuepeekandPop_Empty13_14():
     queue=Queue()
     assert queue.is_empty()==True
