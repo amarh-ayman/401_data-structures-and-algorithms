@@ -11,5 +11,6 @@
 | CC10   | [Stack and Queue](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/challenges/stacks_and_queues/stacksAndQueue)                              |
 | CC11   | [Stack with Queue](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/challenges/queueWithStacks/queue_with_stacks)                            |
 | CC13   | [multi bracket validation](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/challenges/multi_bracket_validation/multi_bracket_validation.py) |
-| CC15   | [trees](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/tree)                                                                         |
-| CC16   | [Maximum Number in the tree](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/maximumNumber)                                           |
+| CC15   | [trees](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/tree)                                                             |
+| CC16   | [Maximum Number in the tree](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/maximumNumber)                               |
+| CC16   | [Breadth First Search Tree](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/breadthFirst)                                 |

@@ -44,5 +44,6 @@ A Binary Search Tree (BST) is a type of tree that does have some structure attac
   - Argument: value
   - Returns: boolean indicating whether or not the value is in the tree at least once.
 
-[code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/trees/tree.py)<br>
-[test Code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/tests/test_tree.py)
+[code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/trees/trees/BinaryTree.py)<br>
+
+[test Code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/tests/test_binaryTree.py)
