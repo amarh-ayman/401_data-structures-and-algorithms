@@ -14,3 +14,4 @@
 | CC15   | [trees](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/tree)                                                             |
 | CC16   | [Maximum Number in the tree](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/maximumNumber)                               |
 | CC16   | [Breadth First Search Tree](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/breadthFirst)                                 |
+| CC17   | [Fizz Buzz](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/FizzBuzz)                                                     |
