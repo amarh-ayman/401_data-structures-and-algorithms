@@ -1,31 +1,28 @@
 from trees.BinaryTree import *
 from trees.stacks_and_queues import Queue
 
-def breadthFirst(self):
-        self.queue=Queue()
-        self.print=[]
-        if not self.root:
+def breadthFirst(tree):
+        queue=Queue()
+        printTree=[]
+        if not tree.root:
             return 'Empty'
 
-        if self.root:
-            self.queue.enqueue(self.root)
-        val=self.queue.dequeue() 
-        self.print.append(val.value)
+        printTree.append(tree.root.value)
 
         def _breadth(node):
             if node.left:
-                self.queue.enqueue(node.left)
+                queue.enqueue(node.left)
 
             if node.right:
-                self.queue.enqueue(node.right)
+                queue.enqueue(node.right)
             
-            if  self.queue.front :
-                 val=self.queue.dequeue() 
-                 self.print.append(val.value) 
+            if  queue.front :
+                 val=queue.dequeue() 
+                 printTree.append(val.value) 
                  _breadth(val)
                  
-        _breadth(val)         
-        return self.print
+        _breadth(tree.root)         
+        return printTree
 
         
 
