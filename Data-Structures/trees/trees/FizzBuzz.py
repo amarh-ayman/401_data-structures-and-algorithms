@@ -53,8 +53,6 @@ def fizzBuzz(Ktree):
     
     treeWithoutBuzzing.append(Ktree.root.value)        
     _closure(Ktree.root)   
-    # print(treees)
-    # print(treeWithoutBuzzing)
     return (treeWithoutBuzzing ,treees)
     
         
