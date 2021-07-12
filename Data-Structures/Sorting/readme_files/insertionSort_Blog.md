@@ -1,7 +1,9 @@
+# Insertion Blog
+
 ```
   InsertionSort(int[] arr)
 
-    FOR i = 1 to arr.length
+    FOR i = 0 to arr.length
 
       int j <-- i - 1
       int temp <-- arr[i]
@@ -14,6 +16,12 @@
 ```
 
 [8,4,23,42,16,15]
+
+i = 0
+
+## nothing change
+
+---
 
 i = 1
 
@@ -28,6 +36,8 @@ i = 1
 
     [4,8,23,42,16,15]
 
+---
+
 i = 2
 
     j = 1
@@ -35,13 +45,19 @@ i = 2
     WHILE j >= 0 AND 23 < arr[j]=8 ===> Flase
     [4,8,23,42,16,15]
 
+---
+
 i = 3
+
 j = 2
 temp = arr[i] = 42
 WHILE j >= 0 AND 42 < arr[j]=23 ===> Flase
 [4,8,23,42,16,15]
 
+---
+
 i = 4
+
 j = 3
 temp = arr[i] = 16
 WHILE j >= 0 AND 16 < arr[j]=42 ===> True
@@ -55,11 +71,15 @@ j <-- j - 1 = 1
 WHILE j >= 0 AND 16 < arr[j]=8 ===> False
 [4,8,16,23,42,15]
 
+---
+
 i = 5
 j = 4
 temp = arr[i] = 42
 WHILE j >= 0 AND 42 < arr[j]=23 ===> False
 [4,8,16,23,42,15]
+
+---
 
 i = 6
 j = 5
