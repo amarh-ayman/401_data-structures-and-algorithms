@@ -16,3 +16,5 @@
 | CC16   | [Breadth First Search Tree](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/breadthFirst)                                                       |
 | CC17   | [Fizz Buzz](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/readmeFiles/FizzBuzz)                                                                           |
 | CC20   | [Insertion Sort](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/Sorting/readme_files/insertionSort) |
+| CC21   | [Merge Sort](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/Sorting/readme_files/mergeSort)         |
+| CC22   | [َQuick Sort](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/Sorting/readme_files/quickSort)        |
