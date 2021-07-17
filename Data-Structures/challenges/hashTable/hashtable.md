@@ -22,4 +22,27 @@ Hash - A hash is the result of some algorithm taking an incoming string and conv
 
 ## Approach & Efficiency
 
+### The approach used is to convert the key of the input into index and put the key value object in the hashtable, that contains a linked list for the collisions.
+
+### Big O Notation
+
+#### Time: O(1)
+
+#### Space: O(N)
+
 ## API
+
+- Create a hashtable with the following methods:
+  - `add` which takes in both the key and value. Hash the key, and add the key and value pair to the table, handling collisions as needed.
+  - `get` that takes in the key and returns the value from the table.
+  - `contains` that takes in the key and returns a boolean, indicating if the key exists in the table already.
+  - `hash` that takes in an arbitrary key and returns an index in the collection.
+- Insert key, value pair in the hashtable.
+- Hash keys to determine is which index it should be added.
+- Make a link_list to handle collisions.
+- Retrieve the value of the bucket using its key.
+- Determine if a specific key is inside the hashtable or not.
+
+[code](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/challenges/hashTable/hashtable.py)
+
+[test](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/challenges/tests/test_hashTable.py)
