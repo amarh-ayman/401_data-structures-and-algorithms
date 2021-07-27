@@ -20,18 +20,24 @@ class Hashtable:
     
     def get(self,key):
       hashed_key = self.hash(key)
+      if not self.map[hashed_key]:
+        return None 
+
       ll=self.map[hashed_key].head
       while ll :
         if  ll.value[0]==key :
           return ll.value[1]
-        ll=ll.next  
+        ll=ll.next 
+
+      return None 
+        
     
     def contains(self,key):
       hashed_key = self.hash(key)
       try:
           ll=self.map[hashed_key].head
       except :
-        return 'Null' 
+        return False 
 
       while ll :
         if  ll.value[0]==key :

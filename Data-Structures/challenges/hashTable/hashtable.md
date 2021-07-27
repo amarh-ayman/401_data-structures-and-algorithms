@@ -43,6 +43,6 @@ Hash - A hash is the result of some algorithm taking an incoming string and conv
 - Retrieve the value of the bucket using its key.
 - Determine if a specific key is inside the hashtable or not.
 
-[code](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/challenges/hashTable/hashtable.py)
+[code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/hashTable/hashtable.py)
 
-[test](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/challenges/tests/test_hashTable.py)
+[test](https://github.com/amarh-ayman/401_data-structures-and-algorithms/blob/main/Data-Structures/challenges/tests/test_hashtable.py)
