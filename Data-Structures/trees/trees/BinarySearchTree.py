@@ -1,6 +1,10 @@
+import sys
+sys.path.append('Data-Structures/trees/trees')
 from trees.BinaryTree import *
 
 class BinarySearchTree(BinaryTree):
+    def __init__(self):
+        super().__init__()
     def Add(self ,key):
         if not self.root :
             self.root=Node(key)
@@ -50,4 +54,5 @@ class BinarySearchTree(BinaryTree):
 # tree.Add(16)
 # tree.Add(27)
 
-# print(tree.contain(30))
+# print(tree.preOrder())
+# print(tree.contain(4))

@@ -7,93 +7,53 @@ class Node:
 class BinaryTree:
     def __init__(self):
         self.root=None
-        self.print=''
-        self.pre=True
-        self.inO=True
-        self.post=True
-    
+        
     def preOrder(self):
-        if self.pre :
-            self.print=''
-            self.pre=False
-            
-        if not self.root:
-            return 'None'
-       
-        def _order(node):
-            self.print+=str(node.value)
-            if node.left:
-                _order(node.left)
-            if node.right:
-                _order(node.right)
-        _order(self.root)
-        return self.print
-    
+        def __pre(root):
+            if root is None:
+                return []
+            else :
+                return [root.value]+__pre(root.right)+__pre(root.left)
+        return __pre(self.root)        
+
     def inOrder(self):
-        if self.inO :
-            self.print=''
-            self.inO=False
-            
-        if not self.root:
-            return 'None'
+        def __in(root):
+            if root is None:
+                return []
+            else :
+                return __in(root.right)+[root.value]+__in(root.left)
+        return __in(self.root)        
        
-        def _order(node):
-            if node.left:
-                _order(node.left)
-            self.print+=str(node.value)    
-            if node.right:
-                _order(node.right)
-        _order(self.root)
-        return self.print 
-    
     def postOrder(self):
-        if self.post :
-            self.print=''
-            self.post=False
-            
-        if not self.root:
-            return 'None'
-       
-        def _order(node):
-            if node.left:
-                _order(node.left)
-            if node.right:
-                _order(node.right)
-            self.print+=str(node.value)    
-        _order(self.root)
-        return self.print
-        
-    @classmethod
-    def printing(cls):
-        return cls.print
-
+        def __post(root):
+            if root is None:
+                return []
+            else :
+                return __post(root.right)+__post(root.left)+[root.value]
+        return __post(self.root)    
+   
     def max(self):
+        if not self.root :
+            return 'Empty Tree'
+        def __maximum(root,maxi=0):
+            if root.left:
+                maxi=__maximum(root.left,maxi)
         
-        try:
-            maximum=0
-            def _max(node):
-                nonlocal maximum
-                if node.value > maximum :
-                    maximum=node.value
-
-                if node.left:
-                    _max(node.left)
-                if node.right:
-                    _max(node.right) 
-            
-            _max(self.root)
-            return maximum
-        except:
-            return 'there is an Error'            
+            if root.right:
+                maxi=__maximum(root.right,maxi) 
+                
+            if root.value > maxi :
+                maxi=root.value 
         
-
-
+            return maxi  
+        return __maximum(self.root)         
+        
                 
             
             
             
 
-tree =BinaryTree()
+# tree =BinaryTree()
 # tree.root = Node(1)
 
 # tree.root.left = Node(200)
