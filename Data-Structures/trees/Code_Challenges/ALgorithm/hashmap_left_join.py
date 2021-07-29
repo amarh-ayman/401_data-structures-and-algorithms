@@ -9,27 +9,29 @@ def hashmap_left_join(data1,data2):
   for item in data1.map :
     if item:
       hashed=data2.hash(item.head.value[0])
+      output.append([item.head.value[0],item.head.value[1]])
+      item2='NULL'
       if data2.map[hashed]:
         item2=data2.map[hashed].head.value[1]
-        output.append([item.head.value[0],item.head.value[1],item2])
+      output[(len(output)-1)].append(item2)
   
-  print(output)
+  return output
 
 
 
-synonym=Hashtable()
-synonym.add('fond','enamored')
-synonym.add('warth','anger')
-synonym.add('diligent','employed')
-synonym.add('outfit','garb')
-synonym.add('guide','usher')
+# synonym=Hashtable()
+# synonym.add('fond','enamored')
+# synonym.add('warth','anger')
+# synonym.add('diligent','employed')
+# synonym.add('outfit','garb')
+# synonym.add('guide','usher')
 
 
-antonyms=Hashtable()
-antonyms.add('fond','averse')
-antonyms.add('warth','delight')
-antonyms.add('diligent','idle')
-antonyms.add('guide','follow')
-antonyms.add('flow','jam')
+# antonyms=Hashtable()
+# antonyms.add('fond','averse')
+# antonyms.add('warth','delight')
+# antonyms.add('diligent','idle')
+# antonyms.add('guide','follow')
+# antonyms.add('flow','jam')
 
-hashmap_left_join(synonym,antonyms)
+# hashmap_left_join(synonym,antonyms)

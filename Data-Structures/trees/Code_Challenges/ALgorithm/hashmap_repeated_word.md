@@ -1,16 +1,18 @@
 # Challenge Summary
 
-Write a function called tree intersection which find the common values in both binary trees and return array
+Write a function called repeated word that finds the first word to occur more than once in a string
 
 ## Whiteboard Process
 
-![hashmap_repeated_word](../../../../imgs/hashmap-tree-intersection.png)
+![hashmap_repeated_word](../../../../imgs/hashmap.png)
 
 ## Approach & Efficiency
 
-time O(n\*n)
-space O(1)
+time O(n)
+space O(n)
 
 ## Solution
 
-[hashmap_repeated_word](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/challenges/Algorithm/hashmap_tree_intersection/hashmap_tree_intersection.py)
+[code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures//trees/Code_Challenges/ALgorithm/hashmap_repeated_word.py)
+
+[test](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/trees/tests/test_hashmap_repeated_word.py)

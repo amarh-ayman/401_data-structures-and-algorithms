@@ -1,4 +1,6 @@
-from hashTable.llist import LinkedList
+import sys
+sys.path.append('Data-Structures/challenges/hashTable/')
+from llist import LinkedList
 
 class Hashtable:
     def __init__(self, size=1024):
