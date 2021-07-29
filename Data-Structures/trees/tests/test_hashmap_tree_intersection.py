@@ -1,6 +1,6 @@
-from Algorithm.hashmap_tree_intersection.hashmap_tree_intersection  import treeIntersection
+from trees.BinarySearchTree import *
 
-from Algorithm.hashmap_tree_intersection.BinarySearchTree  import *
+from Code_Challenges.ALgorithm.hashmap_tree_intersection import *
 
 import pytest
 

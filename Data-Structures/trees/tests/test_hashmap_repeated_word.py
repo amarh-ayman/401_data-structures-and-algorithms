@@ -1,4 +1,4 @@
-from Algorithm.hashmap_repeated_word.hashmap_repeated_word  import hashmap_repeated_word
+from Code_Challenges.ALgorithm.hashmap_repeated_word import *
 
 def test_1():
   s1="Once upon a time, there was a brave princess who..."
