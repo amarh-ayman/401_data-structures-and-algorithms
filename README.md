@@ -20,3 +20,4 @@
 | CC22   | [َQuick Sort](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/Sorting/Data-Structures/Sorting/readme_files/Data-Structures/Sorting/readme_files/quickSort)        |
 | CC23   | [َHash Table](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/challenges/hashTable/hashtable)                                                                     |
 | CC33   | [َhashmap-left-join](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/trees/Code_Challenges/ALgorithm/hashmap_left_join)                                           |
+| CC35   | [َgraphs](https://amarh-ayman.github.io/401_data-structures-and-algorithms/Data-Structures/graphs/readmefiles/graphs)                                                                              |
