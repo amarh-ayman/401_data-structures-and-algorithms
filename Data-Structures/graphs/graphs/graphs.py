@@ -1,3 +1,8 @@
+import sys
+sys.path.append('Data-Structures/challenges/stacks_and_queues')
+
+from stacks_and_queues import Queue
+
 class Vertix:
     def __init__(self, value):
         self.value = value
@@ -50,24 +55,24 @@ class Graph:
         return output
 
     def breadth_first(self,node):  
-        queue=[]
-        queue.append(node)
-        visited=[]
-        visited.append(node)
+        queue=Queue()
+        queue.enqueue(node)
+        visited=set()
+        visited.add(node)
         bfList=[]
   
         def __BFS(queue,visited,bfList):
-            node=queue.pop(0)
-            visited.append(node)
+            node=queue.dequeue()
+            visited.add(node)
             bfList.append(node.value)
             neighbors=self.get_neighbors(node)
             for edge in neighbors:
                 if edge.vertix not in visited :
-                    queue.append(edge.vertix)
-                    visited.append(edge.vertix)
+                    queue.enqueue(edge.vertix)
+                    visited.add(edge.vertix)
                     bfList.append(edge.vertix.value)
                     
-            if len(queue):
+            while not queue.is_empty():
                 __BFS(queue,visited,bfList)
         
         __BFS(queue,visited,bfList)
