@@ -1,3 +1,8 @@
+import sys
+sys.path.append('/home/amarah/Software_development_~/401_data-structures-and-algorithms/Data-Structures/challenges/stacks_and_queues/')
+
+from stacks_and_queues import Queue
+
 class Vertix:
     def __init__(self, value):
         self.value = value
@@ -46,36 +51,61 @@ class Graph:
             output += vertix.value
             for edge in self.adjacency_list[vertix]:
                 output += ' -> ' + edge.vertix.value 
+            output+='\n'    
         return output
+
+    def breadth_first(self,node):  
+        queue=Queue()
+        queue.enqueue(node)
+        visited=set()
+        visited.add(node)
+        bfList=[]
+  
+        def __BFS(queue,visited,bfList):
+            node=queue.dequeue()
+            visited.add(node)
+            bfList.append(node.value)
+            neighbors=self.get_neighbors(node)
+            for edge in neighbors:
+                if edge.vertix not in visited :
+                    queue.enqueue(edge.vertix)
+                    visited.add(edge.vertix)
+                    bfList.append(edge.vertix.value)
+                    
+            while not queue.is_empty():
+                __BFS(queue,visited,bfList)
+        
+        __BFS(queue,visited,bfList)
+        return bfList    
 
 
 
 
 if __name__ == '__main__':
     graph = Graph()
-    # a = graph.add_node('a')
-    # # b = graph.add_node('b')
-    # c = graph.add_node('c')
-    # # d = graph.add_node('d')
-    # # e = graph.add_node('e')
-    # # f = graph.add_node('f')
-    # graph.add_edge(a, c)
-    # graph.add_edge(a, d)
-    # graph.add_edge(b, c)
-    # graph.add_edge(b, f)
-    # graph.add_edge(c, a)
-    # graph.add_edge(c, b)
-    # graph.add_edge(c, e)
-    # graph.add_edge(d, a)
-    # graph.add_edge(d, e)
-    # graph.add_edge(e, c)
-    # graph.add_edge(e, d)
-    # graph.add_edge(e, f)
-    # graph.add_edge(f, b)
-    # graph.add_edge(f, e)
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    graph.add_edge(a, c)
+    graph.add_edge(a, d)
+    graph.add_edge(b, c)
+    graph.add_edge(b, f)
+    graph.add_edge(c, a)
+    graph.add_edge(c, b)
+    graph.add_edge(c, e)
+    graph.add_edge(d, a)
+    graph.add_edge(d, e)
+    graph.add_edge(e, c)
+    graph.add_edge(e, d)
+    graph.add_edge(e, f)
+    graph.add_edge(f, b)
+    graph.add_edge(f, e)
 
-    # # print(graph)
-    # # print(graph.adjacency_list)
-    print(graph.get_neighbors(a)[0][0])
-    # print(graph.get_nodes())
-    # print(graph.size())
+#     # # print(graph)
+#     # # print(graph.adjacency_list)
+#     # print(graph.get_nodes())
+#     # print(graph.size())
+    print((graph.breadth_first(a)))

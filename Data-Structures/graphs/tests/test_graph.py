@@ -87,8 +87,42 @@ def test_get_neighbors_no_neighbors():
     c = g.add_node('c')
     assert g.size()==1
     neighbors = g.get_neighbors(c)
-    assert str(g)=='c'
+    assert str(g)=='c\n'
     assert neighbors == 'Empty'
+
+def test_breadth_first():
+    graph = Graph()
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    graph.add_edge(a, c)
+    graph.add_edge(a, d)
+    graph.add_edge(b, c)
+    graph.add_edge(b, f)
+    graph.add_edge(c, a)
+    graph.add_edge(c, b)
+    graph.add_edge(c, e)
+    graph.add_edge(d, a)
+    graph.add_edge(d, e)
+    graph.add_edge(e, c)
+    graph.add_edge(e, d)
+    graph.add_edge(e, f)
+    graph.add_edge(f, b)
+    graph.add_edge(f, e)
+
+
+    breadth = graph.breadth_first(a)
+    assert len(breadth) == 11
+    assert breadth[0] == 'a'
+    assert breadth[1] == 'c'
+    assert breadth[2] == 'd'
+    assert breadth[3] == 'c'
+    assert breadth[4] == 'b'
+    assert breadth[5] == 'e'
+  
 
 
 

@@ -32,6 +32,25 @@ _Graph_ test cases:
     A graph with only one node and edge can be properly returned
     An empty graph properly returns null
 
+## breadth_first
+
+## Challenge
+
+- to return the graph nodes in breadth first approach
+
+![alt text](../../../imgs/DFS_Graph.png)
+
+#### Efficiency for breadth first
+
+- Time: O(N)
+- Space: O(N)
+
+## Solution
+
+### to return all nodes after a specific node in a graph as breadth first approach then:
+
+- use `graph.breadth_first(node)`
+
 [code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/graphs/graphs/graphs.py)
 
 [test](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/graphs/tests/test_graph.py)
