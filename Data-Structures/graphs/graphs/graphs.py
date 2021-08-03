@@ -1,5 +1,5 @@
 import sys
-sys.path.append('Data-Structures/challenges/stacks_and_queues')
+sys.path.append('/home/amarah/Software_development_~/401_data-structures-and-algorithms/Data-Structures/challenges/stacks_and_queues/')
 
 from stacks_and_queues import Queue
 
