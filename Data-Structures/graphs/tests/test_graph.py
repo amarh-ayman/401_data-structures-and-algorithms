@@ -112,18 +112,54 @@ def test_breadth_first():
     graph.add_edge(e, f)
     graph.add_edge(f, b)
     graph.add_edge(f, e)
-
-
-    breadth = graph.breadth_first(a)
-    assert len(breadth) == 11
-    assert breadth[0] == 'a'
-    assert breadth[1] == 'c'
-    assert breadth[2] == 'd'
-    assert breadth[3] == 'c'
-    assert breadth[4] == 'b'
-    assert breadth[5] == 'e'
+    data=graph.breadth_first(a)
+    assert len(data) == 6
+    assert data[0] == 'a'
+    assert data[1] == 'c'
+    assert data[2] == 'd'
+    assert data[3] == 'b'
+    assert data[4] == 'e'
   
 
 
+def test_graph_business_trip():
+    graph = Graph()
+    p = graph.add_node('Pandora')
+    a = graph.add_node('Arendelle')
+    m = graph.add_node('Metroville')
+    nm = graph.add_node('New Monstropolis')
+    no = graph.add_node('Naboo')
+    nar = graph.add_node('Narnia')
 
+    graph.add_edge(p, a, 150)
+    graph.add_edge(p, m, 82)
+
+    graph.add_edge(a, p , 150)
+    graph.add_edge(a, nm ,42)
+    graph.add_edge(a, m ,99)
+
+    graph.add_edge(nm, a, 42)
+    graph.add_edge(nm, no, 73)
+    graph.add_edge(nm, m, 105)
+
+    graph.add_edge(no, nm, 73)
+    graph.add_edge(no, m, 26)
+    graph.add_edge(no, nar, 250)
     
+    graph.add_edge(nar, m, 37)
+    graph.add_edge(nar, no, 250)
+
+    graph.add_edge(m, p, 82)
+    graph.add_edge(m, a, 99)
+    graph.add_edge(m, nm, 105)
+    graph.add_edge(m, no, 26)
+    graph.add_edge(m, nar, 37)
+    
+    
+    assert graph.graph_business_trip([m,p])==[True,82]
+    assert graph.graph_business_trip([a,nm,no])==[True,115]
+    assert graph.graph_business_trip([no,p])==[False,0]
+    assert graph.graph_business_trip([nar,a,no])==[False,0]
+
+
+

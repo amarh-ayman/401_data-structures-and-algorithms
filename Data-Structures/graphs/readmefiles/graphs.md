@@ -51,6 +51,25 @@ _Graph_ test cases:
 
 - use `graph.breadth_first(node)`
 
+## graph-business-trip
+
+## Challenge
+
+- to return the if there is path and how much is takes in graph
+
+![alt text](../../../imgs/businessTrip.png)
+
+#### Efficiency for breadth first
+
+- Time: O(N\*N)
+- Space: O(1)
+
+## Solution
+
+### to return the path and it's price :
+
+- use `graph.graph_business_trip(listOfCountries)`
+
 [code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/graphs/graphs/graphs.py)
 
 [test](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/graphs/tests/test_graph.py)
