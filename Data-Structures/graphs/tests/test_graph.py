@@ -115,13 +115,12 @@ def test_breadth_first():
 
 
     breadth = graph.breadth_first(a)
-    assert len(breadth) == 11
+    assert len(breadth) == 6
     assert breadth[0] == 'a'
     assert breadth[1] == 'c'
     assert breadth[2] == 'd'
-    assert breadth[3] == 'c'
-    assert breadth[4] == 'b'
-    assert breadth[5] == 'e'
+    assert breadth[3] == 'b'
+    assert breadth[4] == 'e'
   
 
 

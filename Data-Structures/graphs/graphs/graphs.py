@@ -50,7 +50,7 @@ class Graph:
         for vertix in self.adjacency_list.keys():
             output += vertix.value
             for edge in self.adjacency_list[vertix]:
-                output += ' -> ' + edge.vertix.value 
+                output += ' -'+ str(edge.weight)+'-> ' + edge.vertix.value 
             output+='\n'    
         return output
 
@@ -60,11 +60,11 @@ class Graph:
         visited=set()
         visited.add(node)
         bfList=[]
-  
+
+        bfList.append(node.value)
         def __BFS(queue,visited,bfList):
             node=queue.dequeue()
             visited.add(node)
-            bfList.append(node.value)
             neighbors=self.get_neighbors(node)
             for edge in neighbors:
                 if edge.vertix not in visited :
@@ -78,34 +78,70 @@ class Graph:
         __BFS(queue,visited,bfList)
         return bfList    
 
+    def graph_business_trip(self,listOfCountries):
+        country=self.get_neighbors(listOfCountries[0])
+        count=0
+        check=False
+        for item in listOfCountries[1:] :
+            for target in country :
+                if item==target.vertix:
+                    count+= target.weight
+                    check=True
+
+            country=self.get_neighbors(item)
+        return [check,count]            
+
+
+
+
+
 
 
 
 if __name__ == '__main__':
     graph = Graph()
-    a = graph.add_node('a')
-    b = graph.add_node('b')
-    c = graph.add_node('c')
-    d = graph.add_node('d')
-    e = graph.add_node('e')
-    f = graph.add_node('f')
-    graph.add_edge(a, c)
-    graph.add_edge(a, d)
-    graph.add_edge(b, c)
-    graph.add_edge(b, f)
-    graph.add_edge(c, a)
-    graph.add_edge(c, b)
-    graph.add_edge(c, e)
-    graph.add_edge(d, a)
-    graph.add_edge(d, e)
-    graph.add_edge(e, c)
-    graph.add_edge(e, d)
-    graph.add_edge(e, f)
-    graph.add_edge(f, b)
-    graph.add_edge(f, e)
+    p = graph.add_node('Pandora')
+    a = graph.add_node('Arendelle')
+    m = graph.add_node('Metroville')
+    nm = graph.add_node('New Monstropolis')
+    no = graph.add_node('Naboo')
+    nar = graph.add_node('Narnia')
 
-#     # # print(graph)
-#     # # print(graph.adjacency_list)
-#     # print(graph.get_nodes())
+    graph.add_edge(p, a, 150)
+    graph.add_edge(p, m, 82)
+
+    graph.add_edge(a, p , 150)
+    graph.add_edge(a, nm ,42)
+    graph.add_edge(a, m ,99)
+
+    graph.add_edge(nm, a, 42)
+    graph.add_edge(nm, no, 73)
+    graph.add_edge(nm, m, 105)
+
+    graph.add_edge(no, nm, 73)
+    graph.add_edge(no, m, 26)
+    graph.add_edge(no, nar, 250)
+    
+    graph.add_edge(nar, m, 37)
+    graph.add_edge(nar, no, 250)
+
+    graph.add_edge(m, p, 82)
+    graph.add_edge(m, a, 99)
+    graph.add_edge(m, nm, 105)
+    graph.add_edge(m, no, 26)
+    graph.add_edge(m, nar, 37)
+    
+    # print(graph)
+    # if a in graph.adjacency_list[a]:
+    #     print('**')
+    # print(graph.adjacency_list[p])
+    # for item in graph.adjacency_list[p] :
+    #     if 'Arendelle' == item.vertix.value:
+    #         print('***')
+    #     print(item.vertix,' ',item.weight)
+    
+    # print(graph.get_nodes())
 #     # print(graph.size())
-    # print((graph.breadth_first(a)))
+    print(graph.graph_business_trip([a, nm, no]))
+    print(graph.graph_business_trip([ no,p]))
+    print(graph.graph_business_trip([nar,a,no]))
