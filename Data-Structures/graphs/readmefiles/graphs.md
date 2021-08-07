@@ -55,7 +55,7 @@ _Graph_ test cases:
 
 ## Challenge
 
-- to return the if there is path and how much is takes in graph
+- to return the path and how much is takes in graph
 
 ![alt text](../../../imgs/businessTrip.png)
 
@@ -69,6 +69,25 @@ _Graph_ test cases:
 ### to return the path and it's price :
 
 - use `graph.graph_business_trip(listOfCountries)`
+
+## graph-depth-first
+
+## Challenge
+
+- to return the Deepth path in graph
+
+![alt text](../../../imgs/DFS.png)
+
+#### Efficiency for breadth first
+
+- Time: O(N)
+- Space: O(1)
+
+## Solution
+
+### to return the path and it's price :
+
+- use `graph.graph_depth_first(node)`
 
 [code](https://github.com/amarh-ayman/401_data-structures-and-algorithms/tree/main/Data-Structures/graphs/graphs/graphs.py)
 

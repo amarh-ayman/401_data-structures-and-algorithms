@@ -89,7 +89,28 @@ class Graph:
                     check=True
 
             country=self.get_neighbors(item)
-        return [check,count]            
+        return [check,count]      
+
+
+    def graph_depth_first(self,node):
+        visited=set()
+        visited.add(node)
+        dfList=[]
+
+        def __DFS(node,visited,dfList):
+            visited.add(node)
+            dfList.append(node.value)
+
+            neighbors=self.get_neighbors(node)
+            if neighbors != 'Empty':
+                for edge in neighbors:
+                    if edge.vertix not in visited :
+                        __DFS(edge.vertix,visited,dfList)
+                        
+        
+        __DFS(node,visited,dfList)
+        return dfList    
+
 
 
 
@@ -100,48 +121,48 @@ class Graph:
 
 if __name__ == '__main__':
     graph = Graph()
-    p = graph.add_node('Pandora')
-    a = graph.add_node('Arendelle')
-    m = graph.add_node('Metroville')
-    nm = graph.add_node('New Monstropolis')
-    no = graph.add_node('Naboo')
-    nar = graph.add_node('Narnia')
+    a = graph.add_node('a')
+    b = graph.add_node('b')
+    c = graph.add_node('c')
+    d = graph.add_node('d')
+    e = graph.add_node('e')
+    f = graph.add_node('f')
+    g = graph.add_node('g')
+    h = graph.add_node('h')
 
-    graph.add_edge(p, a, 150)
-    graph.add_edge(p, m, 82)
+    graph.add_edge(a, b)
+    graph.add_edge(a, d)
 
-    graph.add_edge(a, p , 150)
-    graph.add_edge(a, nm ,42)
-    graph.add_edge(a, m ,99)
-
-    graph.add_edge(nm, a, 42)
-    graph.add_edge(nm, no, 73)
-    graph.add_edge(nm, m, 105)
-
-    graph.add_edge(no, nm, 73)
-    graph.add_edge(no, m, 26)
-    graph.add_edge(no, nar, 250)
+    graph.add_edge(b,a)
+    graph.add_edge(b,c)
+    graph.add_edge(b,d)
     
-    graph.add_edge(nar, m, 37)
-    graph.add_edge(nar, no, 250)
 
-    graph.add_edge(m, p, 82)
-    graph.add_edge(m, a, 99)
-    graph.add_edge(m, nm, 105)
-    graph.add_edge(m, no, 26)
-    graph.add_edge(m, nar, 37)
+    graph.add_edge(c,b)
+    graph.add_edge(c,g)
     
-    # print(graph)
-    # if a in graph.adjacency_list[a]:
-    #     print('**')
-    # print(graph.adjacency_list[p])
-    # for item in graph.adjacency_list[p] :
-    #     if 'Arendelle' == item.vertix.value:
-    #         print('***')
-    #     print(item.vertix,' ',item.weight)
+    graph.add_edge(d, a)
+    graph.add_edge(d,b)
+    graph.add_edge(d,e)
+    graph.add_edge(d,h)
+    graph.add_edge(d,f)
     
+    graph.add_edge(f,d)
+    graph.add_edge(f,h)
+
+    graph.add_edge(h,f)
+    graph.add_edge(h,d)
+
+    graph.add_edge(e,d)
+  
+    
+    print(graph)
+    
+    # print(graph.breadth_first(p))
     # print(graph.get_nodes())
 #     # print(graph.size())
-    print(graph.graph_business_trip([a, nm, no]))
-    print(graph.graph_business_trip([ no,p]))
-    print(graph.graph_business_trip([nar,a,no]))
+    # print(graph.graph_business_trip([a, nm, no]))
+    # print(graph.graph_business_trip([ no,p]))
+    # print(graph.graph_business_trip([nar,a,no]))
+
+    print(graph.graph_depth_first(a))
